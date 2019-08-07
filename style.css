@@ -1,0 +1,405 @@
+@import
+    url('https://fonts.googleapis.com/css?family=Anton|Fjalla+One&display=swap" rel="stylesheet');
+
+html {
+    
+     cursor: crosshair;
+    
+}
+body {
+    
+    font-family: 'Anton', sans-serif;
+    font-weight: 300;
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+}
+/*Menu*/
+.header {
+    
+    width: 100%;
+    height: 80px;
+    position: relative;
+   
+}
+.logo {
+    
+    width: 100px;
+    height: 75px;
+    position: absolute;
+    top: 4px;
+    left: 30px;
+    display: inline-block;
+    z-index: 2;
+    
+}
+.menu {
+    
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    margin-bottom: 0;
+    background-color: black;
+    z-index: 2;
+    
+}
+.inline {
+    
+    top: 20px;
+    float: right;
+    position: relative;
+    right: 100px;
+    justify-content: space-between;
+    
+}
+.inline> li {
+    
+    display: inline-block;
+    margin-right: 30px;
+    
+}
+.inline> li> a {
+    
+    font-weight: 550;
+    font: Bold;
+    text-transform: capitalize;
+    color: white;
+    
+}
+/*Section-img*/
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url(assets/img/background-full.jpg);
+    background-position: 50% 10%;
+    background-size: cover;
+    position: relative;
+
+}
+.container .item {
+    
+  flex: 4;
+  position: relative;
+  height: 560px;
+  margin: 20px;
+  border-radius: 2px;
+    
+}
+
+.container .item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: #fff;
+  border-radius: 2px;
+  opacity: 0.5;
+  transition: opacity .5s ease-in-out;
+}
+
+.container .item:hover::before {
+  opacity: 0;
+}
+
+.container .item .image-origins {
+    
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  
+  width: 100%;
+  height: 450px;
+  padding: 30px;
+  
+  box-sizing: border-box;
+  
+  background-size: 70%;
+  background-position: 50% 85%;
+  background-repeat: no-repeat;
+  background-image: url('./assets/img/aologo.png');
+
+}
+
+.container .item:hover .image-origins {
+    
+  transition: all 0.25s ease-out;
+  transform: translateY(0);
+  opacity: 1;
+
+}
+.container .item .image-asylum{
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  
+  width: 100%;
+  height: 450px;
+  padding: 30px;
+  
+  box-sizing: border-box;
+  
+  background-size: 70%;
+  background-position: 50% 85%;
+  background-repeat: no-repeat;
+  background-image: url('./assets/img/aslogo.png');
+
+}
+
+.container .item:hover .image-asylum {
+    
+  transition: all 0.25s ease-out;
+  transform: translateY(0);
+  opacity: 1;
+
+}
+.container .item .image-city {
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  
+  width: 100%;
+  height: 450px;
+  padding: 30px;
+  
+  box-sizing: border-box;
+  
+  background-size: 78%;
+  background-position: 50% 85%;
+  background-repeat: no-repeat;
+  background-image: url('./assets/img/aclogo.png');
+
+}
+
+.container .item:hover .image-city {
+    
+  transition: all 0.25s ease-out;
+  transform: translateY(0);
+  opacity: 1;
+
+}
+/**/
+.overlay {
+    
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+    opacity: 0.5;
+    
+    
+}
+div> h2 {
+    
+    font-family: monospace;
+    text-align: center;
+    top: 0;
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    margin-top: 50px;
+    
+}
+.text-overlay {
+    
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 800;
+    font-family: monospace;
+    text-align: center;
+    top: -10px;
+    margin: 0;
+    padding-bottom: 80px;
+    color: white;
+    z-index: 10;
+    
+}
+/*Cards for test */
+/*Until discover ::before ::after to use like a better solution*/
+/*.card {
+    width: 400px;
+    height: 750px;
+    display: inline-block;
+    background-color: aliceblue;
+    margin: 0;
+    position: relative;
+    left: 45px;
+}
+.card:hover{
+    background-color: black;
+    display: inline-block;
+    margin: 0;
+    position: relative;    
+}*/
+/*
+
+.card-left {
+    
+    float: left;
+    position: relative;
+    left: 30px;
+    width: 400px;
+    height: 600px;
+    display: inline-block;
+    margin: 0;
+    z-index: 0;
+    background-color: transparent;
+
+}
+
+.card-left:hover {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    transition: all 0.5s;
+    background-color: transparent;
+    background-image: url(assets/img/aologo.png);
+    background-repeat: no-repeat;
+    background-size: 350px 150px;
+    background-position: 50% 90%;
+    position: relative;
+    
+}
+/*---------------------------*//*
+.card-center {
+    
+    left: 75px;
+    width: 400px;
+    height: 600px;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    background-color: transparent;
+    z-index: 0;
+
+}
+.card-center:hover {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    transition: all 0.5s;
+    background-color: transparent;
+    background-image: url(assets/img/aslogo.png);
+    background-repeat: no-repeat;
+    background-size: 350px 150px;
+    background-position: 70% 90%;
+    display: inline-block;
+    position: relative;
+    
+}
+.card-right {
+    
+    float: right;
+    right: 30px;
+    width: 400px;
+    height: 600px;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    background-color: transparent;
+    z-index: 0;
+
+}
+.card-right:hover {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    transition: all 0.5s ease-out;
+    background-color: transparent;
+    background-image: url(assets/img/aclogo.png);
+    background-repeat: no-repeat;
+    background-size: 400px 200px;
+    background-position: 50% 90%;
+    display: inline-block;
+    position: relative;
+    
+}
+/*Footer*/
+.inline-footer {
+    
+	display: inline-block;
+    
+}
+
+footer {
+    
+	background: black;
+	font-family: 'Monospace', sans-serif;
+    text-transform: capitalize;
+	position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 135px;
+}
+.footer-transparent {
+    
+    color: aliceblue;
+    background: transparent;
+	font-family: 'Monospace', sans-serif;
+    text-transform: capitalize;
+	position: relative;
+    width: 100%;
+    text-align:  center;
+    bottom: 25px;
+    
+}
+.footer-icons {
+    
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 15px;
+	width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 25px;
+    
+}
+
+.footer-bottom {
+    
+	text-align: center;
+	color: white;
+	width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    
+}
+.letter {
+    
+    letter-spacing: 5px;
+}
+a {
+    
+    color: gray;
+    text-decoration: none;
+    
+}
+a:visited {
+    
+    color:darkorange;
+    
+}
+
+a:hover {
+    
+	color: white;
+    
+}
+
+/*hover no logo - black and white*/
+/*tirar a transparência dos logos nos cards*/
+

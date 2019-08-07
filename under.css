@@ -1,0 +1,58 @@
+.overlay-image-fluid {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.76) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%),url(./assets/img/background-dark-full.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-fluid {
+
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 80px;
+}
+.row {
+
+    display: flex;
+    flex-flow: row;
+
+}
+.row h1 {
+     
+     font-family: 'Anton';
+     font-size: 3rem;
+     color: rgba(255, 255, 255, 0.3);
+     text-transform: uppercase;
+
+}
+.row h2 {
+
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.3);
+}
+.text-center {
+
+    display: flex;
+}
+
+.dark-gray {
+
+    color: rgba(255, 255, 255, 0.3);
+
+}
+/**/
+.col{
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
